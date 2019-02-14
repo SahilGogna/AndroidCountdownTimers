@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/background">
+
+    <TextView
+        android:id="@+id/appLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="City Identification App"
+        android:textSize="25sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/cityLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="City Name"
+        app:layout_constraintTop_toBottomOf="@+id/appLabel"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:textSize="20sp"/>
+
+    <EditText
+        android:id="@+id/cityEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        app:layout_constraintTop_toTopOf="@+id/cityLabel"
+        app:layout_constraintBottom_toBottomOf="@+id/cityLabel"
+        app:layout_constraintLeft_toRightOf="@+id/cityLabel"
+        android:layout_marginLeft="10dp"
+        />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/paris"
+        app:layout_constraintTop_toBottomOf="@+id/cityLabel"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="55dp"
+        />
+
+    <ImageButton
+        android:id="@+id/btnStart"
+        android:layout_width="30sp"
+        android:layout_height="30sp"
+        android:background="@drawable/power"
+        app:layout_constraintStart_toStartOf="@id/imageView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="30sp"
+        />
+
+    <ImageButton
+        android:id="@+id/btnStop"
+        android:layout_width="30sp"
+        android:layout_height="30sp"
+        android:background="@drawable/checked"
+       app:layout_constraintEnd_toEndOf="@id/imageView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="30sp"
+        />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintLeft_toRightOf="@+id/btnStop"
+        app:layout_constraintRight_toLeftOf="@+id/btnStart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="30sp"/>
+
+
+</android.support.constraint.ConstraintLayout>
